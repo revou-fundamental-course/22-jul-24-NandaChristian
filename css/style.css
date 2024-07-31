@@ -1,11 +1,13 @@
 body{
-    
     height: auto;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
 }
 
 nav{
-    
+    box-shadow: 0 0 15px 0 #d9caab;
     display: flex;
     justify-content: space-between;
     padding: 8px;
@@ -21,6 +23,7 @@ header{
 h1{
     margin-left: 8px;
     font-size: 32px;
+    color: #502d01;
 }
 
 .header-logo{
@@ -50,12 +53,12 @@ header img{
     margin: 5px;
     text-decoration: none;
     border-radius: 8px;
-    color: brown;
+    color: #502d01;
     align-items: center;
     display: flex;
 }
 .nav-item:hover{
-    background-color: brown;
+    background-color: #502d01;
     color: white;
 }
 
@@ -71,7 +74,6 @@ header img{
 }
 
 .main-content-banner{
-    /* border: 1px solid; */
     width: 100%;
     flex-direction: column;
     position: relative;
@@ -108,22 +110,20 @@ header img{
 }
 .content-text{
     display: flex;
-    background-color: rgb(220, 172, 137);
+    background-color: #d9caab;
 }
 
 .main-content-text{
     width: 50%;
-    /* border: 1px solid; */
     padding-left: 50px;
     display: block;
     align-content: center;
-    background-color: rgba(199, 156, 125, 0.735);
+    background-color: #7a5a34;
     border-radius: 0px 250px 250px 0px;
     color: white;
 }
 
 .main-content-form{
-    /* border: 1px solid; */
     width: 50%;
     height: 500px;
     align-items: center;
@@ -146,7 +146,6 @@ header img{
 .main-content-foto{
     width: 100%;
     height: 450px;
-    /* border: 1px solid; */
     margin: 0;
     padding: 0;
 }
@@ -197,7 +196,7 @@ textarea{
 }
 button {
     width: 25%;
-    background-color: #4CAF50;
+    background-color: #7a5a34;
     color: white;
     padding: 12px 16px;
     text-align: center;
@@ -210,15 +209,16 @@ button {
   }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 #502d01;
     transition: 0.3s;
     width: 30%;
     height: 425px;
     text-align: center;
+    color: #502d01;
   }
   
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 #502d01;
   }
   
 .container {
@@ -229,24 +229,25 @@ button {
     width: 100%;
     height: 150vh;
     flex-direction: row;
-    /* border: 1px solid; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .main-content-profile{
-    /* border: 1px solid; */
     width: 100%;
     height: 400px;
+    padding-top: 15px;
 }
 
 
 .main-content-profile h2{
     text-align: center;
+    color: #502d01;
 }
 
 .main-item{
+    width: 100%;
     flex-direction: row;
     display: flex;
     justify-content: space-evenly;
@@ -265,16 +266,15 @@ button {
 
 .data{
     margin: 15px;
+    color: #502d01;
 }
 
 .main-content-contact{
-    /* border: 1px solid; */
     width: 100%;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .item-insta{
@@ -283,25 +283,40 @@ button {
     margin: 5px;
     text-decoration: none;
     border-radius: 8px;
-    color: brown;
+    color: #502d01;
     align-items: center;
     display: flex;
 }
+.item-insta:hover{
+    background-color: #502d01;
+    color: white;
+}
+
 .item-wa{
     border: 1px solid;
     padding: 15px;
     margin: 5px;
     text-decoration: none;
     border-radius: 8px;
-    color: brown;
+    color: #502d01;
     align-items: center;
     display: flex;
 }
+.item-wa:hover{
+    background-color: #502d01;
+    color: white;
+}
+
 footer{
     width: 100%;
     height: 50px;
-    background-color: #4CAF50;
     text-align: center;
     color: white;
     padding-top: 25px;
+    color: #502d01;
 }
+
+.error {
+    color: red;
+}
+

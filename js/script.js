@@ -15,11 +15,61 @@ function getGreeting() {
 
     return greeting;
 }
-
 document.addEventListener("DOMContentLoaded", () => {
     const greetingElement = document.getElementById("greeting");
     greetingElement.textContent = getGreeting();
 });
+
+
+//Form Validation 
+function validateForm() {
+    let isValid = true;
+    
+    // Clear previous error messages
+    document.getElementById('nameError').innerText = '';
+    document.getElementById('emailError').innerText = '';
+    document.getElementById('saranError').innerText = '';
+    
+    // Validate name
+    const name = document.getElementById('nama').value;
+    if (name === '') {
+        document.getElementById('nameError').innerText = 'Nama harus diisi';
+        isValid = false;
+    }
+    
+    // Validate email
+    const email = document.getElementById('email').value;
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (email === '') {
+        document.getElementById('emailError').innerText = 'Email harus diisi';
+        isValid = false;
+    } else if (!emailPattern.test(email)) {
+        document.getElementById('emailError').innerText = 'Email tidak valid';
+        isValid = false;
+    }
+    
+    // Validate suggestion
+    const saran = document.getElementById('saran').value;
+    if (saran === '') {
+        document.getElementById('saranError').innerText = 'Saran harus diisi';
+        isValid = false;
+    }
+    
+    return isValid;
+}
+
+function submitForm(event) {
+    event.preventDefault(); // Mencegah halaman merefresh
+    
+    if (validateForm()) {
+        // Clear the form
+        document.getElementById('mainForm').reset();
+        
+        // Optional: show a success message
+        alert('Form telah dikirim');
+    }
+}
+
 
 // slide
 
@@ -38,3 +88,4 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
