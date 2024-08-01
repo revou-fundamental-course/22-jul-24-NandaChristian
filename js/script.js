@@ -1,3 +1,4 @@
+// Sapaan Otomatis
 function getGreeting() {
     const now = new Date();
     const hour = now.getHours();
@@ -48,7 +49,7 @@ function validateForm() {
         isValid = false;
     }
     
-    // Validate suggestion
+    // Validate saran
     const saran = document.getElementById('saran').value;
     if (saran === '') {
         document.getElementById('saranError').innerText = 'Saran harus diisi';
@@ -62,14 +63,13 @@ function submitForm(event) {
     event.preventDefault(); // Mencegah halaman merefresh
     
     if (validateForm()) {
-        // Clear the form
+        // mereset form
         document.getElementById('mainForm').reset();
         
-        // Optional: show a success message
+        // show a success message
         alert('Form telah dikirim');
     }
 }
-
 
 // slide
 
@@ -89,3 +89,18 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
+// Navbar Scroll
+let prevScrollPos = window.scrollY;
+const navbar = document.getElementById("navbar");
+
+window.onscroll = function() {
+  let currentScrollPos = window.scrollY;
+
+  if (prevScrollPos > currentScrollPos) {
+    navbar.style.top = "0";
+  } else {
+    navbar.style.top = "-50px"; // Sesuaikan nilai ini dengan tinggi navbar Anda
+  }
+  
+  prevScrollPos = currentScrollPos;
+}
